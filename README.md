@@ -120,6 +120,6 @@ Return 2 when exceeds your possible number of borrow.
 void member::giveBack()
 This function is called when the giveback something is successful.
 Reduce `nowBorrow` by one as shown below.
-`
+```
 nowBorrow--;
-`
+```
