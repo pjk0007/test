@@ -1,25 +1,26 @@
-Project title
+System Software Experiment 3
+-Project 1: Library Management
 ------
- This program reads the 'resource.dat' and 'input.dat' files from the library class and processes them according to the order of the input and generates output.
+ This program reads the `resource.dat` and `input.dat` files from the library class and processes them according to the order of the input and generates output.
 The main function only generated the library and the function that generates the library reads the file and stores and processes the data.
-First, read the file 'resource.dat' and save the contents of the data to the Vector declared as resource data type.
-Read the 'input.dat' file to store the vector declared as the member data type and process the input order using the information of each vector.
+First, read the file `resource.dat` and save the contents of the data to the Vector declared as resource data type.
+Read the `input.dat` file to store the vector declared as the member data type and process the input order using the information of each vector.
 
 Getting started
 -----
 ### What things you need to install and how to install
-Among the files to run the program, we need 'main.cpp', 'library.cpp', 'resource.cpp', 'book.cup' and 'memberc'.
-Required data files include 'resource.dat' and 'input.dat'.
+Among the files to run the program, we need `main.cpp`, `library.cpp`, `resource.cpp`, `book.cup` and `memberc`.
+Required data files include `resource.dat` and `input.dat`.
 ### How to compile
 You can compile in two ways. The first method is as follows.
 ```
 $ g++ -std=c++11 -o start main.cpp library.cpp resource.cpp book.cpp member.cpp undergraduate.cpp
 ```
-Other methods can be made through 'Makefile'.
+Other methods can be made through `Makefile`.
 ```
 $ make
 ```
-The above command creates an executable file called 'start'.
+The above command creates an executable file called `start`.
 
 Running
 -----------
@@ -28,11 +29,11 @@ When a file named `start` is created through a compilation,
 ```
 $ ./start >output.dat
 ```
-You can obtain a result of 'output.dat' through the command.
+You can obtain a result of `output.dat` through the command.
 
 API
 --------
-library
+### library
 ```
 class library
 {
@@ -43,7 +44,7 @@ class library
 		library();
 };
 ```
-rsource
+### rsource
 ```
 class resource
 {
@@ -82,7 +83,7 @@ Return 0 when return is success.
 Return 1 when delayed return.
 Return 2 when you did not borrow this `Type`.
 
-member
+### member
 ```
 class member
 {
