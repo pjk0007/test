@@ -1,6 +1,6 @@
-System Software Experiment 3
--Project 1: Library Management
-------
+# System Software Experiment 3
+## Project 1: Library Management
+### Profect dexcription
  This program reads the `resource.dat` and `input.dat` files from the library class and processes them according to the order of the input and generates output.
 The main function only generated the library and the function that generates the library reads the file and stores and processes the data.
 First, read the file `resource.dat` and save the contents of the data to the Vector declared as resource data type.
@@ -73,12 +73,15 @@ class resource
 		int giveBack(string mn, int N_y, int N_m, int N_d);
 };
 ```
+```
 int resource::borrow(string mn, int B_y, int B_m, int B_d, int R_y, int R_m, int R_d)
+```
 Return 0 when borrow is success.
 Return 1 when you already borrowed this `Type` at B_y/B_m/B_d
 Return 2 when other member already borrowed this `Type`
-
+```
 int resource::giveBack(string mn, int N_y, int N_m, int N_d)
+```
 Return 0 when return is success.
 Return 1 when delayed return.
 Return 2 when you did not borrow this `Type`.
@@ -112,15 +115,20 @@ class member
 		void giveBack();
 };
 ```
-
+```
 int member::borrow(int n_y, int n_m, int n_d)
+```
 Return 0 when you can borrow something.
 Return 1 when you are restricted member until ban_year/ban_month/ban_day
 Return 2 when exceeds your possible number of borrow.
-
+```
 void member::giveBack()
+```
 This function is called when the giveback something is successful.
 Reduce `nowBorrow` by one as shown below.
 ```
-nowBorrow--;
+void member::giveBack()
+{
+	nowBorrow--;
+}
 ```
